@@ -1,0 +1,81 @@
+* SPICE3 file created from pll_vco.ext - technology: scmos
+
+.option scale=1u
+
+M1000 mid1 mid1 vdd vdd pfet w=12 l=6
++  ad=120 pd=44 as=634 ps=250
+M1001 ip2_bar out gnd Gnd nfet w=11 l=7
++  ad=143 pd=48 as=1078 ps=336
+M1002 mid2 out bot1 Gnd nfet w=12 l=7
++  ad=96 pd=40 as=180 ps=78
+M1003 vdd mid1 top1 vdd pfet w=12 l=6
++  ad=0 pd=0 as=192 ps=80
+M1004 gnd vctrl a_n403_n107# w_n413_n115# pfet w=17 l=9
++  ad=999 pd=464 as=204 ps=58
+M1005 vctrl ip2_bar vctrl w_n1148_n147# pfet w=16 l=4
++  ad=698 pd=214 as=0 ps=0
+M1006 mid1 vctrl gnd Gnd nfet w=12 l=6
++  ad=108 pd=42 as=0 ps=0
+M1007 gnd vctrl bot1 Gnd nfet w=12 l=6
++  ad=0 pd=0 as=0 ps=0
+M1008 vctrl ip2_bar ip Gnd nfet w=16 l=4
++  ad=751 pd=188 as=160 ps=52
+M1009 out mid3 top3 w_76_21# pfet w=12 l=7
++  ad=96 pd=40 as=168 ps=76
+M1010 vdd out ip2_bar w_n1290_n16# pfet w=11 l=7
++  ad=0 pd=0 as=121 ps=44
+M1011 vctrl out ip w_n1148_69# pfet w=16 l=4
++  ad=0 pd=0 as=160 ps=52
+M1012 out mid3 bot3 Gnd nfet w=12 l=7
++  ad=96 pd=40 as=180 ps=78
+M1013 vdd mid1 top3 vdd pfet w=12 l=6
++  ad=0 pd=0 as=0 ps=0
+M1014 mid3 mid2 bot2 Gnd nfet w=12 l=7
++  ad=84 pd=38 as=192 ps=80
+M1015 vdd ip vctrl w_n1381_n16# pfet w=11 l=6
++  ad=0 pd=0 as=0 ps=0
+M1016 gnd vctrl bot3 Gnd nfet w=12 l=6
++  ad=0 pd=0 as=0 ps=0
+M1017 gnd vctrl bot2 Gnd nfet w=12 l=6
++  ad=0 pd=0 as=0 ps=0
+M1018 mid2 out top1 w_n41_20# pfet w=12 l=7
++  ad=96 pd=40 as=0 ps=0
+M1019 vctrl ip gnd Gnd nfet w=11 l=7
++  ad=0 pd=0 as=0 ps=0
+M1020 mid3 mid2 top2 w_14_20# pfet w=12 l=7
++  ad=84 pd=38 as=204 ps=82
+M1021 vdd mid1 top2 vdd pfet w=12 l=6
++  ad=0 pd=0 as=0 ps=0
+M1022 gnd vctrl a_n403_n154# Gnd nfet w=17 l=9
++  ad=0 pd=0 as=204 ps=58
+C0 w_n413_n115# gnd 3.38fF
+C1 out w_n1148_69# 6.96fF
+C2 out w_n41_20# 8.18fF
+C3 w_n413_n115# vctrl 9.82fF
+C4 mid2 w_14_20# 8.18fF
+C5 vdd mid1 54.93fF
+C6 w_n1381_n16# ip 6.96fF
+C7 w_n1148_n147# vctrl 11.00fF
+C8 ip w_n1148_69# 4.14fF
+C9 w_n1148_n147# ip2_bar 6.65fF
+C10 w_n1290_n16# out 8.61fF
+C11 gnd vctrl 2.91fF
+C12 w_n1148_69# vctrl 3.67fF
+C13 w_76_21# mid3 7.74fF
+C14 mid2 w_n41_20# 2.07fF
+C15 mid3 w_14_20# 2.07fF
+C16 gnd Gnd 91.98fF
+C17 bot3 Gnd 8.27fF
+C18 bot2 Gnd 6.20fF
+C19 bot1 Gnd 6.34fF
+C20 mid3 Gnd 52.93fF
+C21 mid2 Gnd 49.54fF
+C22 top3 Gnd 2.26fF
+C23 top2 Gnd 2.44fF
+C24 top1 Gnd 2.44fF
+C25 mid1 Gnd 63.44fF
+C26 vdd Gnd 70.92fF
+C27 ip2_bar Gnd 146.04fF
+C28 vctrl Gnd 2349.84fF
+C29 ip Gnd 21.66fF
+C30 out Gnd 2022.41fF

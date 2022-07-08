@@ -1,0 +1,92 @@
+timestamp 1647145390
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_n403_n154#" 38 0 -403 -154 ndiff 204 58 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 337 5687 -382 -154 ndiff 442 86 519 122 0 0 0 0 0 0 0 0 522 134 0 0 0 0
+node "a_n403_n107#" 84 0 -403 -107 pdiff 0 0 204 58 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 3215 58092 -98 -82 ndiff 372 158 420 288 0 0 0 0 0 0 0 0 1897 664 0 0 0 0
+node "bot3" 169 8272 81 -81 ndiff 180 78 0 0 0 0 0 0 0 0 0 0 252 134 0 0 0 0
+node "bot2" 166 6204 19 -25 ndiff 192 80 0 0 0 0 0 0 0 0 0 0 203 136 0 0 0 0
+node "bot1" 169 6345 -37 -82 ndiff 180 78 0 0 0 0 0 0 0 0 0 0 206 138 0 0 0 0
+node "mid3" 465 52927 34 -25 ndiff 84 38 84 38 746 214 0 0 0 0 0 0 655 196 0 0 0 0
+node "mid2" 444 49539 -23 -25 ndiff 96 40 96 40 737 212 0 0 0 0 0 0 603 188 0 0 0 0
+node "top3" 384 2256 81 31 pdiff 0 0 168 76 0 0 0 0 0 0 0 0 191 102 0 0 0 0
+node "top2" 362 2444 18 70 pdiff 0 0 204 82 0 0 0 0 0 0 0 0 184 100 0 0 0 0
+node "top1" 368 2444 -37 31 pdiff 0 0 192 80 0 0 0 0 0 0 0 0 195 104 0 0 0 0
+node "mid1" 1646 63436 -92 39 pc 108 42 120 44 1494 630 0 0 0 0 0 0 708 352 0 0 0 0
+node "gnd" 756 28200 -1371 -141 ndiff 264 92 60 54 0 0 0 0 0 0 0 0 750 310 0 0 0 0
+node "vdd" 619 43616 -1371 9 pdiff 90 66 286 96 0 0 0 0 0 0 0 0 1163 366 0 0 0 0
+node "ip2_bar" 1453 146039 -1280 -125 ndiff 143 48 121 44 1309 556 0 0 0 0 0 0 1576 394 0 0 0 0
+node "op_xor" 4843 2.34984e+06 -1371 -122 ndiff 751 188 698 214 12139 2770 0 0 0 0 0 0 38138 5318 0 0 0 0
+equiv "op_xor" "ip_bar"
+equiv "op_xor" "vctrl"
+node "net1" 2284 234212 -1398 -33 pc 160 52 160 52 2852 1024 0 0 0 0 0 0 1499 404 0 0 0 0
+equiv "net1" "ip"
+node "out" 4906 2.02241e+06 -1311 -188 p 96 40 96 40 5948 2192 0 0 0 0 0 0 35522 4316 0 0 0 0
+node "w_n413_n115#" 4797 0 -413 -115 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2345 204
+node "w_n1148_n147#" 3367 0 -1148 -147 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1376 150
+node "w_76_21#" 2506 0 76 21 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1024 128
+node "w_14_20#" 2506 0 14 20 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1024 128
+node "w_n41_20#" 2506 0 -41 20 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1024 128
+node "w_n1290_n16#" 3367 0 -1290 -16 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1376 150
+node "w_n1381_n16#" 3367 0 -1381 -16 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1376 150
+node "vdd" 37924 27307 -103 65 nw 240 216 348 154 0 0 0 0 0 0 0 0 1829 620 0 0 5504 600
+node "w_n1148_69#" 3367 0 -1148 69 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1376 150
+cap "vdd" "w_n1290_n16#" 1410
+cap "vdd" "top3" 940
+cap "op_xor" "w_n1148_n147#" 10998
+cap "net1" "w_n1381_n16#" 6956
+cap "top2" "vdd" 940
+cap "out" "w_n1290_n16#" 8608
+cap "op_xor" "out" 1800
+cap "mid1" "out" 1200
+cap "w_14_20#" "mid2" 8175
+cap "gnd" "out" 750
+cap "top1" "w_n41_20#" 1692
+cap "gnd" "op_xor" 2910
+cap "w_n1148_n147#" "ip2_bar" 6648
+cap "vdd" "top1" 1128
+cap "w_14_20#" "top2" 1692
+cap "net1" "op_xor" 1950
+cap "w_76_21#" "out" 1880
+cap "w_n1148_69#" "out" 6964
+cap "mid3" "w_14_20#" 2068
+cap "w_n1290_n16#" "ip2_bar" 1175
+cap "out" "w_n41_20#" 8175
+cap "op_xor" "w_n1148_69#" 3666
+cap "op_xor" "w_n413_n115#" 9825
+cap "net1" "w_n1148_69#" 4136
+cap "vdd" "w_n1381_n16#" 1410
+cap "mid2" "w_n41_20#" 2068
+cap "w_76_21#" "top3" 1880
+cap "vdd" "mid1" 54926
+cap "mid3" "w_76_21#" 7742
+cap "gnd" "w_n413_n115#" 3384
+cap "op_xor" "w_n1381_n16#" 1175
+device mosfet nfet -391 -154 -390 -153 9 17 "Gnd!" "op_xor" 18 0 "a_n403_n154#" 17 0 "gnd" 17 0
+device mosfet pfet -391 -107 -390 -106 9 17 "w_n413_n115#" "op_xor" 18 0 "a_n403_n107#" 17 0 "gnd" 17 0
+device mosfet nfet 89 -81 90 -80 6 12 "Gnd!" "op_xor" 12 0 "bot3" 12 0 "gnd" 12 0
+device mosfet nfet 28 -81 29 -80 6 12 "Gnd!" "op_xor" 12 0 "bot2" 12 0 "gnd" 12 0
+device mosfet nfet -29 -82 -28 -81 6 12 "Gnd!" "op_xor" 12 0 "bot1" 12 0 "gnd" 12 0
+device mosfet nfet -91 -82 -90 -81 6 12 "Gnd!" "op_xor" 12 0 "gnd" 12 0 "mid1" 12 0
+device mosfet nfet 88 -25 89 -24 7 12 "Gnd!" "mid3" 14 0 "bot3" 12 0 "out" 12 0
+device mosfet nfet 27 -25 28 -24 7 12 "Gnd!" "mid2" 14 0 "bot2" 12 0 "mid3" 12 0
+device mosfet nfet -30 -25 -29 -24 7 12 "Gnd!" "out" 14 0 "bot1" 12 0 "mid2" 12 0
+device mosfet pfet 88 31 89 32 7 12 "w_76_21#" "mid3" 14 0 "top3" 12 0 "out" 12 0
+device mosfet pfet 27 31 28 32 7 12 "w_14_20#" "mid2" 14 0 "top2" 12 0 "mid3" 12 0
+device mosfet pfet -30 31 -29 32 7 12 "w_n41_20#" "out" 14 0 "top1" 12 0 "mid2" 12 0
+device mosfet pfet 88 70 89 71 6 12 "vdd" "mid1" 12 0 "top3" 12 0 "vdd" 12 0
+device mosfet pfet 27 70 28 71 6 12 "vdd" "mid1" 12 0 "top2" 12 0 "vdd" 12 0
+device mosfet pfet -28 71 -27 72 6 12 "vdd" "mid1" 12 0 "top1" 12 0 "vdd" 12 0
+device mosfet pfet -92 72 -91 73 6 12 "vdd" "mid1" 12 0 "vdd" 12 0 "mid1" 12 0
+device mosfet pfet -1135 -135 -1134 -134 4 16 "w_n1148_n147#" "ip2_bar" 8 0 "op_xor" 32 0 "op_xor" 0 0
+device mosfet nfet -1280 -132 -1279 -131 7 11 "Gnd!" "out" 14 0 "gnd" 11 0 "ip2_bar" 11 0
+device mosfet nfet -1371 -129 -1370 -128 7 11 "Gnd!" "net1" 14 0 "gnd" 11 0 "op_xor" 11 0
+device mosfet pfet -1280 0 -1279 1 7 11 "w_n1290_n16#" "out" 14 0 "ip2_bar" 11 0 "vdd" 11 0
+device mosfet pfet -1371 3 -1370 4 6 11 "w_n1381_n16#" "net1" 12 0 "op_xor" 11 0 "vdd" 11 0
+device mosfet nfet -1135 44 -1134 45 4 16 "Gnd!" "ip2_bar" 8 0 "net1" 16 0 "op_xor" 16 0
+device mosfet pfet -1135 82 -1134 83 4 16 "w_n1148_69#" "out" 8 0 "net1" 16 0 "op_xor" 16 0
+subcap "net1" -212547
