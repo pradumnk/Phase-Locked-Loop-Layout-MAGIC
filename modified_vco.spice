@@ -1,0 +1,50 @@
+* SPICE3 file created from vco.ext - technology: scmos
+
+.include model_VlsiDesign.txt 
+
+.param Lmin=0.4U
+.param Wn=1.009U
+.param Wp=2.435U
+
+M1000 mid1 mid1 vdd vdd cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1001 mid2 out bot1 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1002 vdd mid1 top1 vdd cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1003 mid1 vctrl gnd Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1004 gnd vctrl bot1 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1005 out mid3 top3 w_76_21# cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1006 out mid3 bot3 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1007 vdd mid1 top3 vdd cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1008 mid3 mid2 bot2 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1009 gnd vctrl bot3 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1010 gnd vctrl bot2 Gnd cmosn L=Lmin W=Wn AD =(2*wn*lmin) AS =(2*wn*lmin) PD =(2*wn+4*lmin) PS =(2*wn+4*lmin)
+M1011 mid2 out top1 w_n41_20# cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1012 mid3 mid2 top2 w_14_20# cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+M1013 vdd mid1 top2 vdd cmosp L=Lmin W=Wp AD=(2*Lmin*Wp) AS=(2*Lmin*Wp) PD=(2*Wp+4*Lmin) PS=(2*Wp+4*Lmin)
+C0 mid3 w_14_20# 2.07fF
+C1 mid2 w_14_20# 8.18fF
+C2 mid1 vdd 54.93fF
+C3 vctrl gnd 2.91fF
+C4 w_n41_20# out 8.18fF
+C5 w_76_21# mid3 7.74fF
+C6 w_n41_20# mid2 2.07fF
+C7 gnd Gnd 58.09fF
+C8 vctrl Gnd 122.72fF
+C9 bot3 Gnd 8.27fF
+C10 bot2 Gnd 6.20fF
+C11 bot1 Gnd 6.34fF
+C12 mid3 Gnd 52.93fF
+C13 mid2 Gnd 49.54fF
+C14 out Gnd 7.11fF
+C15 top2 Gnd 2.44fF
+C16 top1 Gnd 2.44fF
+C17 mid1 Gnd 63.44fF
+C18 vdd Gnd 7.31fF
+
+v1 vdd gnd 3.3
+vin vctrl 0 dc 0 pulse(1.3 3.3 4ns 20ps 20ps 10ns 30ns)
+.tran 10u 40ns 0ns
+.control
+run
+plot v(vctrl) 4+v(out)
+.endc
+.end
